@@ -81,6 +81,34 @@ docker run -itd -v "$(pwd)":/web -u $(id -u):$(id -g) -p 8000:8000 --name sphinx
 The web server will be listening on port `8000`.
 All the files in the current directory will be mounted in the container.
 
+**Docker compose example with autobuild enabled:**
+
+```
+---
+version: "3.8"
+services:
+  sphinx:
+    image: dldl/sphinx-server:latest
+    container_name: sphinx
+    restart: unless-stopped
+    environment:
+      - TZ=Europe/Brussels
+      - UID=0
+      - GID=0
+    ports:
+      - 9000:8000
+    volumes:
+      - docs:/web
+
+volumes: 
+  docs:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: '/some/path/on/host/docs'
+```
+
 ### Interacting with the server
 
 - To stop the server, use `docker stop sphinx-server`
