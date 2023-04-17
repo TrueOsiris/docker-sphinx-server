@@ -4,4 +4,14 @@ sphinx-autobuild
 sphinx-rtd-theme
 sphinxcontrib-plantuml
 sphinx-asciidoc
-
+f5-sphinx-theme
+sphinxcontrib-addmetahtml
+sphinxcontrib-blockdiag
+sphinxcontrib-googleanalytics
+sphinxcontrib-images
+sphinxcontrib-nwdiag
+sphinxcontrib-websupport
+sphinxjp.themes.basicstrap
+recommonmark
+restview
+myst-parser
