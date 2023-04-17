@@ -1,4 +1,4 @@
-FROM python:3.8.0-alpine3.10
+FROM ubuntu22.04
 
 MAINTAINER Tim Chaubet <tim@chaubet.be>
 
