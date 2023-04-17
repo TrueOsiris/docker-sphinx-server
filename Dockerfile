@@ -10,7 +10,7 @@ RUN apt-get update && \
        python3-pip \
        make \
        ca-certificates \
-       ttf-dejavu \
+       fonts-dejavu \
        openjdk-11-jre \
        graphviz
 #apk add --no-cache --virtual --update py3-pip make wget ca-certificates ttf-dejavu openjdk8-jre graphviz \
