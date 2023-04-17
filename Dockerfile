@@ -16,10 +16,6 @@ RUN apt-get update && \
 
 RUN pip install --no-cache-dir  -r requirements.txt
 
-#RUN wget http://downloads.sourceforge.net/project/plantuml/plantuml.jar -P /opt/ \
-#    && echo -e '#!/bin/sh -e\njava -jar /opt/plantuml.jar "$@"' > /usr/local/bin/plantuml \
-#    && chmod +x /usr/local/bin/plantuml
-
 COPY ./server.py /opt/sphinx-server/
 COPY ./.sphinx-server.yml /opt/sphinx-server/
 
@@ -27,4 +23,4 @@ WORKDIR /web
 
 EXPOSE 8000 35729
 
-CMD ["python", "/opt/sphinx-server/server.py"]
+CMD ["python3", "/opt/sphinx-server/server.py"]
