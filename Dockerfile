@@ -1,4 +1,4 @@
-FROM ubuntu22.04
+FROM ubuntu:22.04
 
 MAINTAINER Tim Chaubet <tim@chaubet.be>
 
