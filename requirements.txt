@@ -4,6 +4,7 @@ livereload
 myst-parser
 recommonmark
 restview
+shyaml
 sphinx-asciidoc
 sphinx-autobuild
 sphinx-autodoc-typehints

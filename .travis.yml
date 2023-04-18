@@ -17,3 +17,4 @@ script:
   - curl -O http://localhost:8000/index.html
   - grep -q "Welcome to test’s documentation!" index.html
   - docker exec -it sphinx-server plantuml -version
+
