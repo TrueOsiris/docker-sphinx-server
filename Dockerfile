@@ -17,7 +17,7 @@ RUN apt-get update \
 
 RUN pip install --no-cache-dir  -r requirements.txt
 
-COPY ./.sphinx-server.yml ./
+COPY ./sphinx-server.yml ./
 COPY ./start.sh ./
 RUN chmod +x /start.sh
 

@@ -1,9 +1,14 @@
 #!/bin/bash
 echo "loading sphinx-autobuild config..."
 if [ ! -f /docs/.sphinx-server.yml ]; then
-  echo "copying default config .sphinx-server.yml
-  cp /.sphinx-server.yml /docs/
+  echo "copying default config to /docs/.sphinx-server.yml"
+  cp /sphinx-server.yml /docs/.sphinx-server.yml
 fi
 ignorelist=`cat /docs/.sphinx-server.yml | shyaml get-values ignore | xargs` 
 echo "starting sphinx-autobuild..."
-sphinx-autobuild --port 8000 --delay 2 --ignore $ignorelist /docs /docs/_build/html
+if [ ! -f /docs/source/conf.py ]; then
+	echo "no /docs/source/conf.py found."
+	echo "running basic install"
+	sphinx-quickstart -p docs -a trueosiris -r 0.1 -l en --sep --ext-autodoc /docs
+fi
+sphinx-autobuild --port 8000 --delay 2 --ignore "$ignorelist" /docs/source /docs/build/html
