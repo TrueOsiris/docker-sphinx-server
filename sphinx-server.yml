@@ -4,8 +4,8 @@ autobuild: true
 
 # Add files and folders you want autobuild watcher to ignore on changes.
 ignore:
-  - .git
-  - .sphinx-server.yml
+  - ".git"
+  - ".sphinx-server.yml"
 
 # Add a username and a password if you want to enable http authentication.
 # This will not work if autobuild is enabled.
