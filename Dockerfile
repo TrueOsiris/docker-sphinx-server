@@ -6,6 +6,7 @@ COPY ./requirements.txt requirements.txt
 
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+       net-tools \
        make \
        ca-certificates \
        fonts-dejavu \
