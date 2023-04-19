@@ -21,7 +21,7 @@ COPY ./.sphinx-server.yml ./
 COPY ./start.sh ./
 RUN chmod +x /start.sh
 
-VOLUME ['/docs']
+VOLUME ["/docs"]
 WORKDIR /docs
 
 EXPOSE 8000
