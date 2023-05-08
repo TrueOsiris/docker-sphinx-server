@@ -12,5 +12,5 @@ if [ ! -f /docs/source/conf.py ]; then
 	echo "running basic install"
 	sphinx-quickstart -p myproject -a trueosiris -r 0.1 -l en --sep --ext-autodoc /docs
 fi
-sphinx-autobuild --host 0.0.0.0 --port 8000 /docs/source /docs/build/html 
+sphinx-autobuild --host 0.0.0.0 --port 8000 -b asciidoc /docs/source /docs/build/html 
 #--ignore "$ignorelist"
