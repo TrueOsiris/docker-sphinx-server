@@ -3,7 +3,6 @@
 Sphinx-Server allows you to build *Sphinx documentation* using a Docker
 image based on Alpine.
 
-![Trueosiris Rules](https://img.shields.io/badge/trueosiris-rules-f08060) 
 [![Docker Pulls](https://badgen.net/docker/pulls/trueosiris/sphinx-server?icon=docker&label=pulls)](https://hub.docker.com/r/trueosiris/sphinx-server/) 
 [![Docker Stars](https://badgen.net/docker/stars/trueosiris/sphinx-server?icon=docker&label=stars)](https://hub.docker.com/r/trueosiris/sphinx-server/) 
 [![Docker Image Size](https://badgen.net/docker/size/trueosiris/sphinx-server?icon=docker&label=image%20size)](https://hub.docker.com/r/trueosiris/sphinx-server/) 
