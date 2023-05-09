@@ -3,10 +3,14 @@
 Sphinx-Server allows you to build *Sphinx documentation* using a Docker
 image based on Alpine.
 
-[![Build Status](https://travis-ci.org/dldl/sphinx-server.svg?branch=master)](https://travis-ci.org/dldl/sphinx-server)
-[![Docker pulls](https://img.shields.io/docker/pulls/dldl/sphinx-server.svg)](https://hub.docker.com/r/dldl/sphinx-server/)
-[![Docker layers](https://images.microbadger.com/badges/image/dldl/sphinx-server.svg)](https://microbadger.com/images/dldl/sphinx-server)
-[![Docker automated build](https://img.shields.io/docker/automated/dldl/sphinx-server.svg)](https://hub.docker.com/r/dldl/sphinx-server/)
+![Trueosiris Rules](https://img.shields.io/badge/trueosiris-rules-f08060) 
+[![Docker Pulls](https://badgen.net/docker/pulls/trueosiris/sphinx-server?icon=docker&label=pulls)](https://hub.docker.com/r/trueosiris/sphinx-server/) 
+[![Docker Stars](https://badgen.net/docker/stars/trueosiris/sphinx-server?icon=docker&label=stars)](https://hub.docker.com/r/trueosiris/sphinx-server/) 
+[![Docker Image Size](https://badgen.net/docker/size/trueosiris/sphinx-server?icon=docker&label=image%20size)](https://hub.docker.com/r/trueosiris/sphinx-server/) 
+![Github stars](https://badgen.net/github/stars/trueosiris/docker-sphinx-server?icon=github&label=stars) 
+![Github forks](https://badgen.net/github/forks/trueosiris/docker-sphinx-server?icon=github&label=forks) 
+![Github issues](https://img.shields.io/github/issues/TrueOsiris/docker-sphinx-server)
+![Github last-commit](https://img.shields.io/github/last-commit/TrueOsiris/docker-sphinx-server)
 
 **Functionnalities:**
 
