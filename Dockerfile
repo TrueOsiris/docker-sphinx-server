@@ -12,6 +12,7 @@ RUN apt-get update \
        fonts-dejavu \
        graphviz \
        wget \
+       ruby \
        asciidoctor \
     && apt-get clean -y \
     && apt-get autoremove -y \
