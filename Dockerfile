@@ -16,7 +16,8 @@ RUN apt-get update \
        wget \
        ruby \
        asciidoctor \
-       libenchant1c2a \
+       enchant-2 \
+       libenchant-2-2 \
     && apt-get clean -y \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
