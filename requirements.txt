@@ -18,5 +18,6 @@ sphinxcontrib-nwdiag
 sphinxcontrib-plantuml
 sphinxcontrib-websupport
 sphinxjp.themes.basicstrap
-sphinxcontrib-spelling
 pyenchant
+sphinxcontrib-spelling
+
