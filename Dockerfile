@@ -3,6 +3,7 @@ FROM trueosiris/ubuntupypip:22.10
 MAINTAINER Tim Chaubet <tim@chaubet.be>
 
 ENV PLANTUML_JAR_PATH=/plantuml.jar
+ENV ASCIIDOC=false
 
 COPY ./requirements.txt requirements.txt
 
