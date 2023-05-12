@@ -22,7 +22,7 @@ RUN apt-get update \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --no-cache-dir  -r requirements.txt
+RUN python3 -m pip install --upgrade pip && pip3 install --no-cache-dir  -r requirements.txt
 
 COPY ./sphinx-server.yml ./
 COPY ./start.sh ./
