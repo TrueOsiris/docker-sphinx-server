@@ -2,6 +2,8 @@ FROM trueosiris/ubuntupypip:22.10
 
 MAINTAINER Tim Chaubet <tim@chaubet.be>
 
+ENV PLANTUML_JAR_PATH=/plantuml.jar
+
 COPY ./requirements.txt requirements.txt
 
 RUN apt-get update \
@@ -22,6 +24,8 @@ RUN pip install --no-cache-dir  -r requirements.txt
 
 COPY ./sphinx-server.yml ./
 COPY ./start.sh ./
+COPY ./plantuml.jar ./
+
 RUN chmod +x /start.sh
 
 VOLUME ["/docs"]
