@@ -19,6 +19,7 @@ RUN apt-get update \
        asciidoctor \
        enchant-2 \
        libenchant-2-2 \
+       imagemagick \
     && apt-get clean -y \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
