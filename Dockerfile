@@ -11,16 +11,18 @@ RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y \
        net-tools \
        make \
-       ca-certificates \
-       fonts-dejavu \
-       graphviz \
        wget \
        ruby \
+       ca-certificates 
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+       fonts-dejavu \
+       graphviz \
        asciidoctor \
        enchant-2 \
        libenchant-2-2 \
-       imagemagick \
-    && apt-get clean -y \
+       imagemagick 
+RUN apt-get clean -y \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 
