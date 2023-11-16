@@ -11,28 +11,24 @@ RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y \
        python3 \
        python3-venv \
-       pipx \
        net-tools \
        make \
        wget \
        ruby \
-       ca-certificates 
-RUN apt-get update \
-    && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+       ca-certificates \
        fonts-dejavu \
        graphviz \
        asciidoctor \
        enchant-2 \
        libenchant-2-2 \
-       imagemagick 
-RUN apt-get clean -y \
+       imagemagick \
+    && apt-get clean -y \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pipx ensurepath \
-    && python3 -m venv .venv/sphinx \
-    && .venv/sphinx/bin/pip install --upgrade pip 
-RUN .venv/sphinx/bin/pip install --no-cache-dir  -r requirements.txt
+RUN python3 -m venv .venv/sphinx \
+    && .venv/sphinx/bin/pip install --upgrade pip \
+    && .venv/sphinx/bin/pip install --no-cache-dir  -r requirements.txt
 
 COPY ./sphinx-server.yml ./
 COPY ./start.sh ./
