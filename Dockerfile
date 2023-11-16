@@ -29,7 +29,10 @@ RUN apt-get clean -y \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 
-#RUN python3 -m pip install --upgrade pip && pip3 install --no-cache-dir  -r requirements.txt
+RUN pipx ensurepath \
+    && python3 -m venv .venv/sphinx \
+    && .venv/sphinx/bin/pip install --upgrade pip \
+    && .venv/sphinx/bin/pip3 install --no-cache-dir  -r requirements.txt
 
 COPY ./sphinx-server.yml ./
 COPY ./start.sh ./
