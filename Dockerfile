@@ -31,8 +31,8 @@ RUN apt-get clean -y \
 
 RUN pipx ensurepath \
     && python3 -m venv .venv/sphinx \
-    && .venv/sphinx/bin/pip install --upgrade pip \
-    && .venv/sphinx/bin/pip3 install --no-cache-dir  -r requirements.txt
+    && .venv/sphinx/bin/pip install --upgrade pip 
+RUN .venv/sphinx/bin/pip install --no-cache-dir  -r requirements.txt
 
 COPY ./sphinx-server.yml ./
 COPY ./start.sh ./
