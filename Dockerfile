@@ -11,6 +11,7 @@ RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y \
        python3 \
        python3-venv \
+       pipx \
        net-tools \
        make \
        wget \
