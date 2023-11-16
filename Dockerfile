@@ -1,4 +1,4 @@
-FROM trueosiris/ubuntupypip:22.10
+FROM ubuntu:23.04
 
 MAINTAINER Tim Chaubet <tim@chaubet.be>
 
@@ -9,6 +9,8 @@ COPY ./requirements.txt requirements.txt
 
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+       python3 \
+       python3-venv \
        net-tools \
        make \
        wget \
@@ -26,7 +28,7 @@ RUN apt-get clean -y \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/*
 
-RUN python3 -m pip install --upgrade pip && pip3 install --no-cache-dir  -r requirements.txt
+#RUN python3 -m pip install --upgrade pip && pip3 install --no-cache-dir  -r requirements.txt
 
 COPY ./sphinx-server.yml ./
 COPY ./start.sh ./
