@@ -10,9 +10,9 @@ COPY ./requirements.txt requirements.txt
 RUN /.venv/app/bin/pip install --upgrade pip \
  && /.venv/app/bin/pip install --no-cache-dir  -r requirements.txt
 
-COPY ./sphinx-server.yml ./
-COPY ./start.sh ./
-COPY ./plantuml.jar ./
+COPY ./sphinx-server.yml /
+COPY ./start.sh /
+COPY ./plantuml.jar /
 
 RUN chmod +x /start.sh
 
